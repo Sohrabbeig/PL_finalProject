@@ -12,15 +12,13 @@
 (struct add  (e1 e2)  #:transparent)  ;; add two expressions
 (struct mult (e1 e2)  #:transparent)  ;; multiply two expressions
 (struct neg  (num)    #:transparent)  ;; negation
-(struct islthan  (e1 e2)  #:transparent) ;; comparison
-(struct ifgthan  (e1 e2 e3 e4)  #:transparent)  ;; result is e3 if e1 is strictly greater than e2 else the result is e4
-(struct iszero (e1 e2 e3)  #:transparent)  ;; the result is e2 if e1 is zero else the result is e3
+
+
+
 (struct fun  (nameopt formal body) #:transparent) ;; a recursive(?) 1-argument function
 (struct call (funexp actual)       #:transparent) ;; function call
-(struct mlet  (s e1 e2) #:transparent)
-(struct apair  (e1 e2)  #:transparent)  ;; pair constructor
-(struct first  (e)  #:transparent)  ;; the first part of the pair
-(struct second  (e)  #:transparent)  ;; the second part of the pair
+
+
 (struct munit   ()      #:transparent) ;; unit value -- good for ending a list
 (struct ismunit (e)     #:transparent) ;; if e1 is unit then 1 else 0
 
